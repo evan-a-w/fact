@@ -1,0 +1,7 @@
+(executable
+ (public_name facty)
+ (name main)
+ (flags (:standard -extension-universe beta))
+ (preprocess
+  (pps ppx_jane))
+ (libraries facty core core_extended.immediate unboxed))
