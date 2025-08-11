@@ -1,2 +1,7 @@
-(test
- (name test_facty))
+(library
+ (name test_facty)
+ (flags (:standard -extension-universe beta))
+ (preprocess
+  (pps ppx_jane))
+ (inline_tests)
+ (libraries facty core core_extended.immediate unboxed core_kernel))

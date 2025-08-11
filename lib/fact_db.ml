@@ -19,3 +19,13 @@ type t =
   ; field_pairs : Parent_and_child.Set.t String.Table.t
   ; enum_pairs : Entry.Set.t String.Table.t
   }
+
+let create () =
+  { index = Fact.Base.Table.create ()
+  ; facts = Entry.Table.create ()
+  ; fields = Entry.Table.create ()
+  ; enums = Entry.Table.create ()
+  ; field_pairs = String.Table.create ()
+  ; enum_pairs = String.Table.create ()
+  }
+;;
